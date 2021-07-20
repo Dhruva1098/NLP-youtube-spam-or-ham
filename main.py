@@ -12,7 +12,9 @@ def create_email_list(folder_path):
             email_list.append(email)
     return email_list
 spam_list = create_email_list(r"C:\Users\dhruv\Documents\DS-class\classification\Enron\enron1\spam")
+# this is the spam list, edit the address to your spam dataset
 ham_list = create_email_list(r"C:\Users\dhruv\Documents\DS-class\classification\Enron\enron1\ham")
+#one can also edit it in such a way that there is only a single list. then you would need to edit the code further 
 df_spam = pd.DataFrame(spam_list, columns=['mail'])
 df_ham = pd.DataFrame(ham_list, columns=['mail'])
 df_spam['label']=1
